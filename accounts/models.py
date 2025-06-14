@@ -5,7 +5,7 @@ from django.contrib.auth.models import User
 # Profile model to store user information
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    profile_picture = models.ImageField(upload_to='profile_pics/', default='default.jpg')
+    profile_picture = models.ImageField(upload_to='profile_pics/', default='media/default.jpg')
     banner_color = models.CharField(max_length=7, default='#1f2888')
 
 # Create a signal to automatically create or update the profile when a user is created or updated
