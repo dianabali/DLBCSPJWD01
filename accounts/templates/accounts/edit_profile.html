@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Edit Profile{% endblock %}
+
+{% block content %}
+<!-- Navigation bar -->
+<nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+        <a class="navbar-brand p-4" href="{% url 'home' %}"> <!-- Home link-->
+            <img src="{% static 'img/logo1.png' %}" alt="Logo" style="max-height: 40px;">
+        </a>
+    </div>
+</nav>
+
+<!-- Edit profile section -->
+<section class="h-100 gradient-custom-2">
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center">
+            <div class="col col-lg-9 col-xl-8">
+                <div class="card">
+                    <div class="rounded-top text-white d-flex flex-row" style="background-color: #1f2888; height:220px;">
+                        
+                        <!-- Profile picture and edit button -->
+                        <div class="ms-4 mt-5 d-flex flex-column" style="width: 150px; height: 150px; object-fit: cover; border-radius: 10px;">
+                            {% if user.profile.profile_picture %}
+                            <img src="{{ user.profile.profile_picture.url }}" style="width: 150px; height: 150px; object-fit: cover; border-radius: 10px;" />
+                            {% else %}
+                                <img src="{% static 'profile_pics/default.jpg' %}" />
+                            {% endif %}
+                        </div>
+
+                        <!-- User information -->
+                        <div class="ms-3" style="margin-top: 130px;">
+                            <h5>{{ user.first_name }} {{ user.last_name }}</h5>
+                            <p>@{{ user.username }}</p>
+                        </div>
+                    </div>
+
+                    <!-- Edit profile form -->
+                    <div class="p-4 text-black bg-body-tertiary">
+                        <form method="post" enctype="multipart/form-data" action="{% url 'edit_profile' %}">
+                            {% csrf_token %}
+                            <div class="mb-3">
+                                <label for="id_profile_picture" class="form-label"><b>Profile Picture</b></label> <!-- Profile picture upload -->
+                                {{ form.profile_picture }}
+                            </div>
+                            <div class="mb-3">
+                                <label for="id_username" class="form-label"><b>Username</b></label> <!-- Username field -->
+                                {{ form.username }}
+                            </div>
+                            <div class="mb-3">
+                                <label for="id_first_name" class="form-label"><b>First Name</b></label> <!-- First Name field -->
+                                {{ form.first_name }}
+                            </div>
+                            <div class="mb-3">
+                                <label for="id_last_name" class="form-label"><b>Last Name</b></label> <!-- Last Name field -->
+                                {{ form.last_name }}
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="banner_color" class="form-label"><b>Banner Color</b></label> <!-- Banner color picker -->
+                                <input type="color" id="banner_color" name="banner_color" value="{{ banner_color }}" class="form-control form-control-color" style="width: 200px; height: 70px; padding: 0;">
+                            </div>
+
+                            <hr>
+                            <h5>Password</h5> <!-- Password section -->
+                            {{ pwd_form.as_p }}
+
+                            <button type="submit" class="btn">Save changes</button> <!-- Save changes button -->
+                            <a href="{% url 'profile' %}" class="btn">Cancel</a> <!-- Cancel button -->
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- JavaScript for the profile edit page -->
+<script>
+    window.addEventListener('load', function () {
+        // Scroll to top
+        window.scrollTo(0, 0);
+
+        // Try to focus the username field (or any field you want)
+        const usernameField = document.getElementById('id_username');
+        if (usernameField) {
+            usernameField.focus();
+        }
+    });
+</script>
+{% endblock %}
