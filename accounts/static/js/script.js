@@ -141,17 +141,24 @@ getVoices();
 
 // Add click event to each box
 document.querySelectorAll('main .box').forEach(box => {
-    box.addEventListener('click', () => {
+    box.addEventListener('click', (e) => {
+        
+        // Check if the click was on a delete button or inside it
+        if (e.target.closest('.delete-btn') || e.target.closest('.delete-form')) {
+            e.stopPropagation(); // just in case
+            return; // Don't trigger speech
+        }
+
         const text = box.querySelector('.info').innerText;
         console.log('Box clicked:', text);
         setTextMessage(text);
         speakText();
 
-        // Add active effect
         box.classList.add('active');
         setTimeout(() => box.classList.remove('active'), 800);
     });
 });
+
 
 const theme = (typeof currentTheme !== 'undefined') ? currentTheme : 'blue'; // Use current theme if defined, otherwise default to 'blue'
 const imagePath = `static/img/${theme}/${image}`; // Update image paths in boxes
