@@ -1,7 +1,7 @@
-from django.utils import timezone
-from django.db import models
-from django.contrib.auth.models import User
-
+from django.utils import timezone # Import timezone for handling timestamps
+from django.db import models # Import models for creating database tables
+from django.contrib.auth.models import User # Import User model for user authentication
+ 
 # Profile model to store user information
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)

@@ -143,17 +143,19 @@ getVoices();
 document.querySelectorAll('main .box').forEach(box => {
     box.addEventListener('click', (e) => {
         
-        // Check if the click was on a delete button or inside it
+        // Check if the click was on a delete button 
         if (e.target.closest('.delete-btn') || e.target.closest('.delete-form')) {
-            e.stopPropagation(); // just in case
+            e.stopPropagation();
             return; // Don't trigger speech
         }
 
+        // If the click was on the box, get the text and speak it
         const text = box.querySelector('.info').innerText;
         console.log('Box clicked:', text);
         setTextMessage(text);
         speakText();
 
+        // Add active class for animation
         box.classList.add('active');
         setTimeout(() => box.classList.remove('active'), 800);
     });

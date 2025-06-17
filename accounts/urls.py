@@ -1,5 +1,5 @@
-from django.urls import path
-from . import views
+from django.urls import path # Import path for URL routing
+from . import views # Import views from the current app
 
 # URL paths for the accounts app
 urlpatterns = [

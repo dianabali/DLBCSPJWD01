@@ -6,11 +6,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{% block title %}Babblu{% endblock %}</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"> <!-- Includes Bootstrap 5.3.5 for styling and layout -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"> <!-- Loads custom styles from your static folder -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet"> <!-- Bootstrap Icons for additional icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"> <!-- Font Awesome for additional icons -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}"> <!-- Bootstrap CSS for consistent styling -->
     
     <!-- Dynamically loaded theme CSS -->
     {% if request.session.theme %}
@@ -19,8 +20,9 @@
         <link rel="stylesheet" href="{% static 'css/style.css' %}">
     {% endif %}
 </head>
-<body class="{{ theme }}-theme">
-    {% block content %}{% endblock %}
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<body class="{{ theme }}-theme"> <!-- Applies a theme-related class to the body -->
+    {% block content %}{% endblock %} <!-- Main content block for child templates to override -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> <!-- Bootstrap JS for interactive components -->
 </body>
 </html>

@@ -1,7 +1,7 @@
-from django import forms
-from django.contrib.auth.forms import UserCreationForm, PasswordChangeForm
-from django.contrib.auth.models import User
-from .models import Profile, SpeechCard
+from django import forms # Import Django forms module
+from django.contrib.auth.forms import UserCreationForm, PasswordChangeForm # Import forms for user creation and password change
+from django.contrib.auth.models import User # Import User model for authentication
+from .models import Profile, SpeechCard # Import Profile and SpeechCard models
 
 # CombinedProfileForm combines user and profile information into a single form.
 class CombinedProfileForm(forms.Form):
@@ -15,6 +15,7 @@ class CombinedProfileForm(forms.Form):
         widget=forms.TextInput(attrs={'type': 'color'})
     )
 
+    # This form allows users to edit their profile information, including username, first name, last name, profile picture, and banner color.
     def __init__(self, *args, user=None, **kwargs):
         super().__init__(*args, **kwargs)
         if user:
@@ -28,6 +29,7 @@ class CombinedProfileForm(forms.Form):
                 self.fields['profile_picture'].initial = profile.profile_picture
                 self.fields['banner_color'].initial = profile.banner_color
 
+    # Save method to update user and profile information.
     def save(self, commit=True):
         user = self.user
         user.username = self.cleaned_data['username']
@@ -51,6 +53,7 @@ class CombinedProfileForm(forms.Form):
 
 # OptionalPasswordChangeForm allows users to change their password optionally.
 class OptionalPasswordChangeForm(PasswordChangeForm):
+    # This form extends the default PasswordChangeForm to make all password fields optional.
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         # Make password fields optional
@@ -58,6 +61,7 @@ class OptionalPasswordChangeForm(PasswordChangeForm):
         self.fields['new_password1'].required = False
         self.fields['new_password2'].required = False
 
+    # Custom clean method to handle optional password fields
     def clean(self):
         cleaned_data = super().clean()
         old = cleaned_data.get('old_password')

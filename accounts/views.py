@@ -1,10 +1,10 @@
-from django.shortcuts import get_object_or_404, render, redirect
-from django.contrib.auth import login, logout, authenticate, update_session_auth_hash
-from django.contrib.auth.forms import AuthenticationForm
-from django.contrib.auth.decorators import login_required
-from .forms import CombinedProfileForm, CustomUserCreationForm, OptionalPasswordChangeForm, SpeechCardForm
-from .models import Profile, SpeechCard
-from django.templatetags.static import static
+from django.shortcuts import get_object_or_404, render, redirect # Import necessary functions for rendering views and redirecting
+from django.contrib.auth import login, logout, authenticate, update_session_auth_hash # Import authentication functions
+from django.contrib.auth.forms import AuthenticationForm # Import authentication form for login
+from django.contrib.auth.decorators import login_required # Import decorator to require login for certain views
+from .forms import CombinedProfileForm, CustomUserCreationForm, OptionalPasswordChangeForm, SpeechCardForm # Import custom forms for user creation, profile editing, and speech card handling
+from .models import Profile, SpeechCard # Import models for user profile and speech cards
+from django.templatetags.static import static # Import static files handling for serving profile pictures
 
 # Home view for the application
 @login_required

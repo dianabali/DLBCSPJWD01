@@ -1,7 +1,7 @@
-{% extends 'base.html' %}
-{% load static %}
+{% extends 'base.html' %} <!-- Extends the base template for consistent layout and styles -->
+{% load static %} <!-- Loads static files for CSS and JS -->
 
-{% block title %}Babblu{% endblock %}
+{% block title %}Babblu{% endblock %} <!-- Sets the title of the page -->
 
 {% block content %}
 
@@ -60,5 +60,5 @@
     </div>
 </div>
 
-<script src="{% static 'js/script.js' %}"></script>
+<script src="{% static 'js/script.js' %}"></script> <!-- Custom JavaScript for additional functionality -->
 {% endblock %}

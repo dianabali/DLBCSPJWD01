@@ -1,8 +1,7 @@
-{% extends 'base.html' %}
-{% load static %}
+{% extends 'base.html' %} <!-- Extends the base template for consistent layout and styles -->
+{% load static %} <!-- Loads static files for CSS and JS -->
 
-{% block title %}Edit Profile{% endblock %}
-
+{% block title %}Edit Profile{% endblock %} <!-- Sets the title of the page -->
 {% block content %}
 <!-- Navigation bar -->
 <nav class="navbar navbar-expand-lg">
@@ -83,7 +82,7 @@
         // Scroll to top
         window.scrollTo(0, 0);
 
-        // Try to focus the username field (or any field you want)
+        // Focus on the username field
         const usernameField = document.getElementById('id_username');
         if (usernameField) {
             usernameField.focus();
