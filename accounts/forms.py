@@ -15,7 +15,7 @@ class CombinedProfileForm(forms.Form):
         widget=forms.TextInput(attrs={'type': 'color'})
     )
 
-    # This form allows users to edit their profile information, including username, first name, last name, profile picture, and banner color.
+    # This form allows users to edit their profile information, including username, first name, last name, profile picture, banner color, and password.
     def __init__(self, *args, user=None, **kwargs):
         super().__init__(*args, **kwargs)
         if user:
