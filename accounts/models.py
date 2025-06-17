@@ -8,7 +8,7 @@ class Profile(models.Model):
     profile_picture = models.ImageField(upload_to='profile_pics/', default='default.jpg')
     banner_color = models.CharField(max_length=7, default='#1f2888')
 
-# Create a signal to automatically create or update the profile when a user is created or updated
+# SpeechCard model to store user speech cards
 class SpeechCard(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     text = models.CharField(max_length=255)
