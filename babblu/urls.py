@@ -1,4 +1,3 @@
-# Import necessary modules
 from django.conf import settings # For checking if the project is in DEBUG mode
 from django.conf.urls.static import static # For serving media files in development
 from django.contrib import admin # For admin site

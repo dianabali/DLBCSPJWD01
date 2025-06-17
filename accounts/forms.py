@@ -15,7 +15,7 @@ class CombinedProfileForm(forms.Form):
         widget=forms.TextInput(attrs={'type': 'color'})
     )
 
-    # This form allows users to edit their profile information, including username, first name, last name, profile picture, banner color, and password.
+    # This form allows users to edit their profile information, including username, first name, last name, profile picture, and banner color.
     def __init__(self, *args, user=None, **kwargs):
         super().__init__(*args, **kwargs)
         if user:
@@ -53,7 +53,6 @@ class CombinedProfileForm(forms.Form):
 
 # OptionalPasswordChangeForm allows users to change their password optionally.
 class OptionalPasswordChangeForm(PasswordChangeForm):
-    # This form extends the default PasswordChangeForm to make all password fields optional.
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         # Make password fields optional
@@ -77,7 +76,7 @@ class OptionalPasswordChangeForm(PasswordChangeForm):
             self._errors = {}
             return cleaned_data
 
-# CustomUserCreationForm is a form for creating new users with additional fields.
+# A form for creating new users with additional fields.
 class CustomUserCreationForm(UserCreationForm):
     email = forms.EmailField(required=True, widget=forms.EmailInput(attrs={'class': 'form-control'}))
 

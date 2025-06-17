@@ -98,7 +98,7 @@ function getVoices() {
 
     // Only set default voice if none is set yet
     if (!message.voice && voices.length > 0) {
-        message.voice = voices[0];  // Set only if no voice has been chosen yet
+        message.voice = voices[0]; // Set the first available voice as default
         voicesSelect.value = voices[0].name;
     }
 }
