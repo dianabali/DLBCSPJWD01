@@ -2,6 +2,9 @@ from django import forms # Import Django forms module
 from django.contrib.auth.forms import UserCreationForm, PasswordChangeForm # Import forms for user creation and password change
 from django.contrib.auth.models import User # Import User model for authentication
 from .models import Profile, SpeechCard # Import Profile and SpeechCard models
+from django import forms
+from django.contrib.auth.models import User
+from .models import Profile
 
 # CombinedProfileForm combines user and profile information into a single form.
 class CombinedProfileForm(forms.Form):
@@ -15,11 +18,10 @@ class CombinedProfileForm(forms.Form):
         widget=forms.TextInput(attrs={'type': 'color'})
     )
 
-    # This form allows users to edit their profile information, including username, first name, last name, profile picture, and banner color.
     def __init__(self, *args, user=None, **kwargs):
         super().__init__(*args, **kwargs)
+        self.user = user
         if user:
-            self.user = user
             self.fields['username'].initial = user.username
             self.fields['first_name'].initial = user.first_name
             self.fields['last_name'].initial = user.last_name
@@ -29,7 +31,13 @@ class CombinedProfileForm(forms.Form):
                 self.fields['profile_picture'].initial = profile.profile_picture
                 self.fields['banner_color'].initial = profile.banner_color
 
-    # Save method to update user and profile information.
+    def clean_username(self):
+        username = self.cleaned_data['username']
+        if username != self.user.username:
+            if User.objects.filter(username=username).exists():
+                raise forms.ValidationError("This username is already taken.")
+        return username
+
     def save(self, commit=True):
         user = self.user
         user.username = self.cleaned_data['username']
@@ -40,7 +48,6 @@ class CombinedProfileForm(forms.Form):
 
         profile, created = Profile.objects.get_or_create(user=user)
 
-        # Update profile picture only if a new one was uploaded
         if self.cleaned_data.get('profile_picture'):
             profile.profile_picture = self.cleaned_data['profile_picture']
 
@@ -83,6 +90,20 @@ class CustomUserCreationForm(UserCreationForm):
     class Meta:
         model = User
         fields = ['first_name', 'last_name', 'username', 'email', 'password1', 'password2']
+
+    def clean_email(self):
+        email = self.cleaned_data.get('email')
+        if User.objects.filter(email=email).exists():
+            raise forms.ValidationError("This email is already registered.")
+        return email
+    
+    def clean(self):
+        cleaned_data = super().clean()
+        password1 = cleaned_data.get("password1")
+        password2 = cleaned_data.get("password2")
+
+        if password1 and password2 and password1 != password2:
+            self.add_error('password2', "The passwords didn't match.")
 
 # User form 
 class UserForm(forms.ModelForm):

@@ -44,14 +44,24 @@
                                 <label for="id_profile_picture" class="form-label"><b>Profile Picture</b></label> <!-- Profile picture upload -->
                                 {{ form.profile_picture }}
                             </div>
+
                             <div class="mb-3">
-                                <label for="id_username" class="form-label"><b>Username</b></label> <!-- Username field -->
+                                <label for="id_username" class="form-label"><b>Username</b></label>
                                 {{ form.username }}
+                                {% if form.username.errors %}
+                                    <div class="text-danger">
+                                        {% for error in form.username.errors %}
+                                            <div>{{ error }}</div>
+                                        {% endfor %}
+                                    </div>
+                                {% endif %}
                             </div>
+
                             <div class="mb-3">
                                 <label for="id_first_name" class="form-label"><b>First Name</b></label> <!-- First Name field -->
                                 {{ form.first_name }}
                             </div>
+                            
                             <div class="mb-3">
                                 <label for="id_last_name" class="form-label"><b>Last Name</b></label> <!-- Last Name field -->
                                 {{ form.last_name }}

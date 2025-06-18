@@ -29,6 +29,9 @@ def signup_view(request):
             user = form.save()
             login(request, user)
             return redirect('home')
+        else:
+            # Render the form with errors if invalid
+            return render(request, 'accounts/signup.html', {'form': form})
     else:
         form = CustomUserCreationForm()
     return render(request, 'accounts/signup.html', {'form': form})
