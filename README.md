@@ -51,8 +51,16 @@ Check versions in your terminal in VS Code:
 ![Screenshot](images/installpipenv.png)
 
 2. Install Django using `python -m pip install django`.
+
+![Screenshot](images/installdjango.png)
+
 3. Install Django widget tweaks using `python -m pip install django-widget-tweaks`.
+
+![Screenshot](images/installdjangowidgettweaks.png)
+
 4. Install Pillow using `python -m pip install Pillow`.
+
+![Screenshot](images/installpillow.png)
 
 ## Step 3: Enter the virtual environment
 Activate the virtual environment using `python -m pipenv shell`. After that, you will see something like this:
@@ -88,7 +96,7 @@ To access Django Administration, you need to create a superuser.
 *To exit the virtual environment type* `exit`.
 
 ## Enter virtual environment after `exit`
-1. Open the DLBCSPJWD01 folder in VS Code or navigate inside it.
+1. Open your folder and navigate inside DLBCSPJWD01 project folder.
 2. Run `python -m pipenv shell`. Install Django, widget tweaks, and Pillow if required. In case you see this error `ModuleNotFoundError: No module named '_distutils_hack'`, run this command `python -m pip install --upgrade pip setuptools`.
 3. Run `python manage.py runserver`.
 4. Click on the link and the project will open in the browser.
