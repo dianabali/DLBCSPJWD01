@@ -62,7 +62,7 @@ Run `python manage.py migrate` to run migrations. You will see something like th
 ![Screenshot](images/runserver.png)
 2. Click on the link (highlighted with blue) and the application will run in your browser.
 
-**NOTE: It is recommended to use Google Chrome or Microsoft Edge. Mozilla Firefox does not support `speechSynthesis`.**
+**NOTE: It is recommended to use Google Chrome or Microsoft Edge. Some browsers, like Mozilla Firefox, do not support `speechSynthesis`.**
 
 ## To access Django Admin
 To access the Django Admin, you need to create a superuser.
