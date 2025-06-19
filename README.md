@@ -42,7 +42,7 @@ Check versions in your terminal in VS Code:
 
 ![Screenshot](images/gitclone.png)
 
-3. Navigate inside the DLBCSPJWD01 folder.
+3. Navigate inside the DLBCSPJWD01 folder by running `cd your-path-to-DLBCSPJWD01` like this:
 
 ![Screenshot](images/navigate.png)
 
@@ -76,7 +76,7 @@ Run `python manage.py migrate` to run migrations. You will see something like th
 
 3. Click "Register" to create a new account.
 
-**NOTE: It is recommended to use Google Chrome or Microsoft Edge. Some browsers, like Mozilla Firefox, do not support `speechSynthesis`.**
+**NOTE: It is recommended to use Google Chrome or Microsoft Edge. Some browsers do not support `speechSynthesis`.**
 
 ## To access Django Admin
 To access Django Administration, you need to create a superuser.
