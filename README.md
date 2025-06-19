@@ -30,21 +30,46 @@ These steps will help you set up and run the app on your local machine.
 Ensure you have the following installed:
 - Visual Studio Code
 - Python 3.10 or higher
-- Pipenv
 - Git
 
-Check versions in your terminal:
+Check versions in your terminal in VS Code:
 - python --version
-- pipenv --version
 - git --version
 
-**NOTE: Use Google Chrome or Microsoft Edge as browser. Mozilla Firefox does not support `speechSynthesis`.**
+**NOTE: It is recommended to use Google Chrome or Microsoft Edge. Mozilla Firefox does not support `speechSynthesis`.**
 
 ## Step 1: Clone the project repository
 1. Open Visual Studio Code, then the terminal.
 2. Run this command to clone the repository `git clone https://github.com/dianabali/DLBCSPJWD01`. After that, you will see something like this:
 ![Screenshot](images/gitclone.png)
-4. Navigate inside the DLBCSPJWD01 folder.
+3. Navigate inside the DLBCSPJWD01 folder.
+
+## Step 2: Set up a virtual environment
+1. Inside the project repository, install Pipenv using `python -m pip install pipenv`. This will create a virtual environement and install all dependencies listed in the Pipfile.
+![Screenshot](images/installpipenv.png)
+2. Install Django using `python -m pip install django`.
+3. Install Django widget tweaks using `python -m pip install django-widget-tweaks`.
+4. Install Pillow using `python -m pip install Pillow`.
+
+## Step 3: Enter the virtual environment
+Activate the virtual environment using `python -m pipenv shell`. After that, you will see something like this:
+![Screenshot](images/pipenvshell.png)
+
+## Step 4: Apply database migrations
+Run `python manage.py migrate` to run migrations. You will see something like this:
+![Screenshot](images/migrate.png)
+
+## Step 5: Run the development server
+1. Run `python manage.py runserver` and you will see this:
+![Screenshot](images/runserver.png)
+2. Click on the link (http://127.0.0.1:8000/) and the application will run in your browser.
+
+## To access Django Admin
+To access the Django Admin, you need to create a superuser.
+1. Create a superuser running `python manage.py createsuperuser`.
+2. Follow the prompts to set a username, email, and password.
+3. Run the development server again.
+4. After you open the app in your browser, go to http://127.0.0.1:8000/.
 
 
 
