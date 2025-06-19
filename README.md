@@ -63,7 +63,7 @@ Run `python manage.py migrate` to run migrations. You will see something like th
 2. Click on the link (highlighted with blue) and the application will run in your browser. This is what you will see:
 ![Screenshot](images/babblulogin.png)
 
-Click "Register" to create a new account.
+3. Click "Register" to create a new account.
 
 **NOTE: It is recommended to use Google Chrome or Microsoft Edge. Some browsers, like Mozilla Firefox, do not support `speechSynthesis`.**
 
