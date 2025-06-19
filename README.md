@@ -60,7 +60,10 @@ Run `python manage.py migrate` to run migrations. You will see something like th
 ## Step 5: Run the development server
 1. Run `python manage.py runserver` and you will see this:
 ![Screenshot](images/runserver.png)
-2. Click on the link (highlighted with blue) and the application will run in your browser.
+2. Click on the link (highlighted with blue) and the application will run in your browser. This is what you will see:
+![Screenshot](images/babblulogin.png)
+
+Click "Register" to create a new account.
 
 **NOTE: It is recommended to use Google Chrome or Microsoft Edge. Some browsers, like Mozilla Firefox, do not support `speechSynthesis`.**
 
