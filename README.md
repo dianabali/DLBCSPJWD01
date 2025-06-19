@@ -43,7 +43,7 @@ Check versions in your terminal:
 ## Step 1: Clone the project repository
 1. Open Visual Studio Code, then the terminal.
 2. Run this command to clone the repository `git clone https://github.com/dianabali/DLBCSPJWD01`. After that, you will see something like this:
-![Screenshot](README_images/gitclone.png)
+![Screenshot](images/gitclone.png)
 4. Navigate inside the DLBCSPJWD01 folder.
 
 
