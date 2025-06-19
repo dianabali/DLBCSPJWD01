@@ -39,28 +39,39 @@ Check versions in your terminal in VS Code:
 ## Step 1: Clone the project repository
 1. Open Visual Studio Code, then the terminal.
 2. Run this command to clone the repository `git clone https://github.com/dianabali/DLBCSPJWD01`. After that, you will see something like this:
+
 ![Screenshot](images/gitclone.png)
+
 3. Navigate inside the DLBCSPJWD01 folder.
+
+![Screenshot](images/navigate.png)
 
 ## Step 2: Set up a virtual environment
 1. Inside the project repository, install Pipenv using `python -m pip install pipenv`. This will create a virtual environement and install all dependencies listed in the Pipfile.
+
 ![Screenshot](images/installpipenv.png)
+
 2. Install Django using `python -m pip install django`.
 3. Install Django widget tweaks using `python -m pip install django-widget-tweaks`.
 4. Install Pillow using `python -m pip install Pillow`.
 
 ## Step 3: Enter the virtual environment
 Activate the virtual environment using `python -m pipenv shell`. After that, you will see something like this:
+
 ![Screenshot](images/pipenvshell.png)
 
 ## Step 4: Apply database migrations
 Run `python manage.py migrate` to run migrations. You will see something like this:
+
 ![Screenshot](images/migrate.png)
 
 ## Step 5: Run the development server
 1. Run `python manage.py runserver` and you will see this:
+
 ![Screenshot](images/runserver.png)
+
 2. Click on the link (highlighted with blue) and the application will run in your browser. This is what you will see:
+
 ![Screenshot](images/babblulogin.png)
 
 3. Click "Register" to create a new account.
