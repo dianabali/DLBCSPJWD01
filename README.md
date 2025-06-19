@@ -65,11 +65,11 @@ Run `python manage.py migrate` to run migrations. You will see something like th
 **NOTE: It is recommended to use Google Chrome or Microsoft Edge. Some browsers, like Mozilla Firefox, do not support `speechSynthesis`.**
 
 ## To access Django Admin
-To access the Django Admin, you need to create a superuser.
+To access Django Administration, you need to create a superuser.
 1. Create a superuser running `python manage.py createsuperuser`.
 2. Follow the prompts to set a username, email, and password.
 3. Run the development server again.
-4. After you open the app in your browser, go to /admin. Login with your username and password.
+4. After you open the app in your browser, go to `/admin`, and ogin with your username and password.
 
 
 
