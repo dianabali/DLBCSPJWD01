@@ -22,7 +22,7 @@
 - Django 5.1.7 (Python web framework) - handles routing (URLs), views, and models. Manages user authentication. Processes form submissions to create speech cards. Provides an admin interface for managing users and user-defined speech cards.
 - SQLite - default Django database. Stores users and user-defined speech cards.
 
-## Installation & Run guide (using Pipenv)
+## INSTALLATION AND RUN GUIDE
 These steps will help you set up and run the app on your local machine.
 
 ## Prerequisites
