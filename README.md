@@ -7,7 +7,7 @@
 - Choose between multiple themes (blue, pink, neutral).
 - User authentication system (signup/login/logout).
 - User profile page.
-- Responsive design using Bootstrap 5 and CSS media queries.
+- Responsive design using Bootstrap 5 and CSS.
 
 ## Technology stack
 ### Frontend:
