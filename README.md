@@ -62,14 +62,14 @@ Run `python manage.py migrate` to run migrations. You will see something like th
 ## Step 5: Run the development server
 1. Run `python manage.py runserver` and you will see this:
 ![Screenshot](images/runserver.png)
-2. Click on the link (http://127.0.0.1:8000/) and the application will run in your browser.
+2. Click on the link (highlighted with blue) and the application will run in your browser.
 
 ## To access Django Admin
 To access the Django Admin, you need to create a superuser.
 1. Create a superuser running `python manage.py createsuperuser`.
 2. Follow the prompts to set a username, email, and password.
 3. Run the development server again.
-4. After you open the app in your browser, go to http://127.0.0.1:8000/.
+4. After you open the app in your browser, go to /admin.
 
 
 
