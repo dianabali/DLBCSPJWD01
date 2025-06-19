@@ -1,5 +1,5 @@
 # BABBLU - Communication Web Application
-**Babblu** is a Django-based web application designed to help children with autism or Down syndrome, or other individuals who face difficulties with verbal communication. It uses visual cards and text-to-speech to assist users in expressing themselves.
+**Babblu** is an assistive web application specifically designed to help individuals with speech difficulties such as children with Autism Spectrum Disorder, Down sydrome, or other speech impairments, communicate more easily and independently. Many individuals who face difficulties in verbal expressions often rely on caregivers, teachers, or therapists for day-to-day communication. Babblu aims to reduce this dependency by providing a friendly and interactive platform where users can express their throughts and needs using image-based cards combined with text-to-speech technology.
 
 ## Features
 - Add cards with images and custom text.
@@ -11,26 +11,25 @@
 
 ## Technology stack
 ### Frontend:
-- HTML5, CSS3, JavaScript
-- Bootstrap 5
-- Web Speech API (for browser-based text-to-speech)
+- HTML5 - used to create the layout of the homepage, card creation form, and other pages such as login/signup. 
+- CSS3 - used to style the layout, to control spacing, fonts, and responsiveness of the interface.
+- JavaScript - enables speech synthesis using the Web speech API. Dynamically creates speech boxes and responds to user actions. Handles text-to-speech functionality. Controls components like voice selection, toggling text box, and applying active styles.
+- Bootstrap 5 - accelerates frontend development with pre-built classes and components like navigation bars, profiles, and buttons.
+- Web Speech API (https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API) - powers the text-to-speech feature where users click on cards or type text, and the browser reads it out loud. It provides voice selection and handles speech synthesis.
 
 ### Backend:
-- Python 3.11.9
-- Django 5.1.7
-
-### Environment tools:
-- Pipenv
-- Git & GitHub
-- SQLite (default Django database)
+- Python 3.11.9 - the core programming language for building the backend.
+- Django 5.1.7 (Python web framework) - handles routing (URLs), views, and models. Manages user authentication. Processes form submissions to create speech cards. Provides an admin interface for managing users and user-defined speech cards.
+- SQLite - default Django database. Stores users and user-defined speech cards.
 
 ## Installation & Run guide (using Pipenv)
 These steps will help you set up and run the app on your local machine.
-### Prerequisites
+
+## Prerequisites
 Ensure you have the following installed:
-- Visual Studio Code
-- Python 3.10 or higher
-- Git
+- Visual Studio Code (https://code.visualstudio.com/download)
+- Python 3.10 or higher (https://www.python.org/downloads/)
+- Git (https://git-scm.com/downloads)
 
 Check versions in your terminal in VS Code:
 - python --version
