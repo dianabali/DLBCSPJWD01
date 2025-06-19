@@ -87,7 +87,7 @@ To access Django Administration, you need to create a superuser.
 
 *To quit the runserver type* `Ctrl + C`.
 
-*To exit the virtual environment, type* `exit`.
+*To exit the virtual environment type* `exit`.
 
 
 
