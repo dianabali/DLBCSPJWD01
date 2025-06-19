@@ -69,7 +69,7 @@ To access the Django Admin, you need to create a superuser.
 1. Create a superuser running `python manage.py createsuperuser`.
 2. Follow the prompts to set a username, email, and password.
 3. Run the development server again.
-4. After you open the app in your browser, go to /admin.
+4. After you open the app in your browser, go to /admin. Login with your username and password.
 
 
 
