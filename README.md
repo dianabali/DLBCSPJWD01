@@ -1,5 +1,5 @@
 # BABBLU - Communication Web Application
-**Babblu** is an assistive web application specifically designed to help individuals with speech difficulties such as children with Autism Spectrum Disorder, Down sydrome, or other speech impairments, communicate more easily and independently. Many individuals who face difficulties in verbal expressions often rely on caregivers, teachers, or therapists for day-to-day communication. Babblu aims to reduce this dependency by providing a friendly and interactive platform where users can express their throughts and needs using image-based cards combined with text-to-speech technology.
+**Babblu** is an assistive web application specifically designed to help individuals with speech difficulties (children with Autism Spectrum Disorder, Down sydrome, or other speech impairments) to communicate more easily and independently. Many individuals who face difficulties in verbal expressions often rely on caregivers, teachers, or therapists for day-to-day communication. Babblu aims to reduce this dependency by providing a friendly and interactive platform where users can express their throughts and needs using image-based cards combined with text-to-speech technology.
 
 ## Features
 - Add cards with images and custom text.
