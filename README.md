@@ -93,7 +93,7 @@ To access Django Administration, you need to create a superuser.
 4. After you open the app in your browser, go to `/admin`, and login with your username and password.
 
 *To quit the runserver type* `Ctrl + C`. 
-*To exit the virtual environment type* `exit`.
+*To exit the virtual environment run* `exit`.
 
 ## Enter virtual environment after `exit`
 1. Open your folder and navigate inside DLBCSPJWD01 project folder.
