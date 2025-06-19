@@ -97,6 +97,8 @@ To access Django Administration, you need to create a superuser.
 
 ## Enter virtual environment after `exit`
 1. Open your folder and navigate inside DLBCSPJWD01 project folder.
-2. Run `python -m pipenv shell`. Install Django, widget tweaks, and Pillow if required. In case you see this error `ModuleNotFoundError: No module named '_distutils_hack'`, run this command `python -m pip install --upgrade pip setuptools`.
+2. Run `python -m pipenv shell`.
 3. Run `python manage.py runserver`.
+
+Install Django, widget tweaks, and Pillow if required. In case you see this error `ModuleNotFoundError: No module named '_distutils_hack'`, run this command `python -m pip install --upgrade pip setuptools`. Run `python manage.py runserver` again.
 4. Click on the link and the project will open in the browser.
