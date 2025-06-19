@@ -86,3 +86,9 @@ To access Django Administration, you need to create a superuser.
 
 *To quit the runserver type* `Ctrl + C`. 
 *To exit the virtual environment type* `exit`.
+
+## Enter virtual environment after `exit`
+1. Open the DLBCSPJWD01 folder in VS Code or navigate inside it.
+2. Run `python -m pipenv shell`. Install Django, widget tweaks, and Pillow if required. In case you see this error `ModuleNotFoundError: No module named '_distutils_hack'`, run this command `python -m pip install --upgrade pip setuptools`.
+3. Run `python manage.py runserver`.
+4. Click on the link and the project will open in the browser.
