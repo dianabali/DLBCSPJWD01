@@ -36,8 +36,6 @@ Check versions in your terminal in VS Code:
 - python --version
 - git --version
 
-**NOTE: It is recommended to use Google Chrome or Microsoft Edge. Mozilla Firefox does not support `speechSynthesis`.**
-
 ## Step 1: Clone the project repository
 1. Open Visual Studio Code, then the terminal.
 2. Run this command to clone the repository `git clone https://github.com/dianabali/DLBCSPJWD01`. After that, you will see something like this:
@@ -63,6 +61,7 @@ Run `python manage.py migrate` to run migrations. You will see something like th
 1. Run `python manage.py runserver` and you will see this:
 ![Screenshot](images/runserver.png)
 2. Click on the link (highlighted with blue) and the application will run in your browser.
+**NOTE: It is recommended to use Google Chrome or Microsoft Edge. Mozilla Firefox does not support `speechSynthesis`.**
 
 ## To access Django Admin
 To access the Django Admin, you need to create a superuser.
