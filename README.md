@@ -46,33 +46,37 @@ Check versions in your terminal in VS Code:
 ![Screenshot](images/navigate.png)
 
 ## Step 2: Set up a virtual environment
-1. Inside the project repository, install Pipenv using `python -m pip install pipenv`. This will create a virtual environement and install all dependencies listed in the Pipfile.
+Inside the project repository, install Pipenv using `python -m pip install pipenv`. This will create a virtual environement and install all dependencies listed in the Pipfile.
 
 ![Screenshot](images/installpipenv.png)
-
-2. Install Django using `python -m pip install django`.
-
-![Screenshot](images/installdjango.png)
-
-3. Install Django widget tweaks using `python -m pip install django-widget-tweaks`.
-
-![Screenshot](images/installdjangowidgettweaks.png)
-
-4. Install Pillow using `python -m pip install Pillow`.
-
-![Screenshot](images/installpillow.png)
 
 ## Step 3: Enter the virtual environment
 Activate the virtual environment using `python -m pipenv shell`. After that, you will see something like this:
 
 ![Screenshot](images/pipenvshell.png)
 
-## Step 4: Apply database migrations
+## Step 4: Install Django, widget tweaks, and Pillow
+
+1. Install Django using `python -m pip install django`.
+
+![Screenshot](images/installdjango.png)
+
+**NOTE:** In case you see this error `ModuleNotFoundError: No module named '_distutils_hack'`, run this command `python -m pip install --upgrade pip setuptools`.
+
+2. Install Django widget tweaks using `python -m pip install django-widget-tweaks`.
+
+![Screenshot](images/installdjangowidgettweaks.png)
+
+3. Install Pillow using `python -m pip install Pillow`.
+
+![Screenshot](images/installpillow.png)
+
+## Step 5: Apply database migrations
 Run `python manage.py migrate` to run migrations. You will see something like this:
 
 ![Screenshot](images/migrate.png)
 
-## Step 5: Run the development server
+## Step 6: Run the development server
 1. Run `python manage.py runserver` and you will see this:
 
 ![Screenshot](images/runserver.png)
@@ -100,6 +104,3 @@ To access Django Administration, you need to create a superuser.
 2. Run `python -m pipenv shell`.
 3. Run `python manage.py runserver`.
 4. Click on the link and the project will open in the browser.
-
-**NOTE:** Install Django, widget tweaks, and Pillow if required. In case you see this error `ModuleNotFoundError: No module named '_distutils_hack'`, run this command `python -m pip install --upgrade pip setuptools`. Then, run `python manage.py runserver` again and click on the link to open the application.
-
