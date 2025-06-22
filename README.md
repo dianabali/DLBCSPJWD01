@@ -61,8 +61,6 @@ Activate the virtual environment using `python -m pipenv shell`. After that, you
 
 ![Screenshot](images/installdjango.png)
 
-**NOTE:** In case you see this error `ModuleNotFoundError: No module named '_distutils_hack'`, run this command `python -m pip install --upgrade pip setuptools`.
-
 2. Install Django widget tweaks using `python -m pip install django-widget-tweaks`.
 
 ![Screenshot](images/installdjangowidgettweaks.png)
