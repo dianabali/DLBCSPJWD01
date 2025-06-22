@@ -18,8 +18,8 @@
 - Web Speech API (https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API) - powers the text-to-speech feature where users click on cards or type text, and the browser reads it out loud. It provides voice selection and handles speech synthesis.
 
 ### Backend:
-- Python 3.11.9 - the core programming language for building the backend.
-- Django 5.1.7 (Python web framework) - handles routing (URLs), views, and models. Manages user authentication. Processes form submissions to create speech cards. Provides an admin interface for managing users and user-defined speech cards.
+- Python - the core programming language for building the backend.
+- Django (Python web framework) - handles routing (URLs), views, and models. Manages user authentication. Processes form submissions to create speech cards. Provides an admin interface for managing users and user-defined speech cards.
 - SQLite - default Django database. Stores users and user-defined speech cards.
 
 ## INSTALLATION AND RUN GUIDE
@@ -28,7 +28,7 @@ These steps will help you set up and run the app on your local machine.
 ## Prerequisites
 Ensure you have the following installed:
 - Visual Studio Code (https://code.visualstudio.com/download)
-- Python 3.10 or higher (https://www.python.org/downloads/)
+- Python (https://www.python.org/downloads/)
 - Git (https://git-scm.com/downloads)
 
 Check versions in your terminal in VS Code:
