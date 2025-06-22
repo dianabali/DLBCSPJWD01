@@ -36,7 +36,7 @@ Check versions in your terminal in VS Code:
 - git --version
 
 ## Step 1: Clone the project repository
-1. Open Visual Studio Code, then the terminal.
+1. Open Visual Studio Code, create a new folder, then open the terminal.
 2. Run this command to clone the repository `git clone https://github.com/dianabali/DLBCSPJWD01`. After that, you will see something like this:
 
 ![Screenshot](images/gitclone.png)
