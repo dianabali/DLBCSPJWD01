@@ -23,7 +23,7 @@
 - SQLite - default Django database. Stores users and user-defined speech cards.
 
 ## INSTALLATION AND RUN GUIDE
-These steps will help you set up and run the app on your local machine.
+These steps will help you set up and run the application on your local machine.
 
 ## Prerequisites
 Ensure you have the following installed:
